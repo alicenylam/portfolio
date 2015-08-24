@@ -1,0 +1,71 @@
+Last login: Mon Aug 24 15:49:56 on ttys000
+Alices-Macbook:~ Use$ cd /Users/Use/Design/omnia/omnia 
+Alices-Macbook:omnia Use$ git init
+Reinitialized existing Git repository in /Users/Use/Design/omnia/omnia/.git/
+Alices-Macbook:omnia Use$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   css/main.css
+	modified:   img/header.jpg
+	modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	css/responsive.css
+	header.jpg
+	img/map.png
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Alices-Macbook:omnia Use$ git add .
+Alices-Macbook:omnia Use$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   css/main.css
+	new file:   css/responsive.css
+	copied:     img/header.jpg -> header.jpg
+	modified:   img/header.jpg
+	new file:   img/map.png
+	modified:   index.html
+
+Alices-Macbook:omnia Use$ git commit -m "first comment"
+[master 5d14165] first comment
+ 6 files changed, 67 insertions(+), 24 deletions(-)
+ create mode 100644 css/responsive.css
+ copy img/header.jpg => header.jpg (100%)
+ rewrite img/header.jpg (82%)
+ create mode 100644 img/map.png
+Alices-Macbook:omnia Use$ git status
+On branch master
+nothing to commit, working directory clean
+Alices-Macbook:omnia Use$ git remote -v
+origin	git@github.com:alicenylam/omnia.git (fetch)
+origin	git@github.com:alicenylam/omnia.git (push)
+Alices-Macbook:omnia Use$ git push origin master
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Alices-Macbook:omnia Use$ git push -u origin master
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Alices-Macbook:omnia Use$ git remote set-url origin https://github.com/alicenylam/portfolio.git
+Alices-Macbook:omnia Use$ git push -u origin master
+Counting objects: 25, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (25/25), done.
+Writing objects: 100% (25/25), 4.84 MiB | 1.41 MiB/s, done.
+Total 25 (delta 5), reused 0 (delta 0)
+To https://github.com/alicenylam/portfolio.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+Alices-Macbook:omnia Use$ 
